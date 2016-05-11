@@ -1,5 +1,5 @@
 Description for this MySql UDF function for send strings over udp port from databases
 
-To add this function to your mysql you must copy send_udp.so to mysql plugin lybrary (ex: /usr/lib/mysql/plugin) and execute this SQL sentnce as root in mysql server
+To add this function to your mysql you must copy send_udp.so to mysql plugin library path (ex: /usr/lib/mysql/plugin) and execute this SQL sentnce as root in mysql server
 
 -> CREATE FUNCTION send_udp RETURNS INTEGER SONAME "send_udp.so";
