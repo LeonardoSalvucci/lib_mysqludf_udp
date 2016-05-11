@@ -1,6 +1,8 @@
 # MySql send_udp UDF Function
-Perhaps you need to extract info from a database `when data occurs` and this tool was made for send this over udp port. For example, you can create a trigger on before insert event and extract some data to analyze in other environment.
-Note that i don't use TCP because it's a blocking type of socket and can make the database crash. Otherwise we must be careful because an UDP packet don't have acknowledge so we can lose information.
+Perhaps you need to extract info from a database `when data occurs` and this tool was made for send this over udp port. 
+For example, you can create a trigger on `after insert` event and extract some data to analyze in other environment.
+Note that i don't use TCP because it's a blocking type of socket and can make the database crash. 
+Otherwise we must be careful because an UDP packet does not have ack and we can lose information.
 
 #### Function definition
 send_udp(ip,port,message);
